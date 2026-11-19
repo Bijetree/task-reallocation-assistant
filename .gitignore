@@ -1,0 +1,19 @@
+# Local databases contain mutable project data and must never be committed.
+database/*.db
+database/*.db-*
+database/*.sqlite*
+
+# Python environments and generated files.
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and logs.
+.env
+*.log
