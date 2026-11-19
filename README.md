@@ -47,6 +47,3 @@ python -m unittest discover -v
 
 Tests use temporary databases and do not change the local `database/allocation.db`.
 
-## Docker (optional)
-
-The project includes [Docker setup instructions](DOCKER.md). The Tkinter desktop window in a Linux container requires an X server on the Windows host. Running the application directly with Python is the simplest option for most users.
