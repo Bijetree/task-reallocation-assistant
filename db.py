@@ -396,5 +396,5 @@ def seed_database():
 
 if __name__ == "__main__":
     initialise_database()
-    seed_database()
+    #seed_database()
     print("Database initialised successfully.")
