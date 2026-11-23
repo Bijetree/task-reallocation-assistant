@@ -1,6 +1,11 @@
 # Task Reallocation Assistant
 
-A Python and Tkinter application for managing team members, skills, tasks, task dependencies, and human-reviewed task reallocation recommendations. Recommendations include candidate comparisons and explanations. A task assignment changes only after an authorised lead explicitly approves the proposal.
+A local application based on Python and Tkinter for managing team members, skills, tasks, task dependencies, and human-reviewed task reallocation recommendations. Recommendations include candidate comparisons and explanations. A task assignment changes only after an authorised lead explicitly approves the proposal. No external AI model or API has been integrated in this prototype.
+
+## Project status
+
+- **Implemented:** Data management, workload views, candidate filtering and scoring, explanations, PROPOSE/ASK/WAIT decisions, lead approval or rejection, history, eligible undo and bounded preference learning.
+- **Limitations:** Reviews are user-initiated; there is no background scheduler. Durations and dependencies are entered manually, and ranking is per task, not globally optimized. Learning and gated automatic action are not benchmark-validated. 
 
 ## Start with a new, empty database
 
@@ -33,6 +38,8 @@ Existing local database files are not deleted or modified by this setup. They ar
 
 ## Add project data
 
+On first launch, it creates the schema and default statuses only, with no sample team or task records.
+
 Use **Data management** to create skills, members, task statuses, and tasks. Edit a member to change their name, availability, team lead role, and skills. Edit a task to change its name, duration, priority, slack, status, and required skills. The **Task and member links** tab manages assignments, additional skill requirements, and dependencies.
 
 Member workload is calculated from assigned unfinished tasks, so it is displayed and maintained by the system rather than entered manually. Entity IDs and history timestamps are generated automatically.
@@ -46,4 +53,8 @@ python -m unittest discover -v
 ```
 
 Tests use temporary databases and do not change the local `database/allocation.db`.
+
+## Technology and AI assistance
+
+OpenAI ChatGPT/Codex helped with implementation, tests and illustrative mockup creation. Suggestions were reviewed, adapted to the code and checked with tests and walkthroughs. No AI model runs in the app. 
 
