@@ -9,9 +9,7 @@ A local application based on Python and Tkinter for managing team members, skill
 
 ## Start with a new, empty database
 
-The SQLite database is local application data and is intentionally excluded from Git. On first launch, the application creates `database/allocation.db` and initializes the required task statuses (`Pending`, `In Progress`, and `Complete`). It does not add sample members, skills, or tasks. The database remains on the local computer as the user adds records.
-
-Existing local database files are not deleted or modified by this setup. They are not uploaded to GitHub.
+The SQLite database is local application data and is intentionally excluded from Git. On first launch, the application creates `database/allocation.db` and initializes the required task statuses (`Pending`, `In Progress`, and `Complete`). On first launch, it creates the schema and default statuses only, with no sample team or task records.
 
 ## Run on Windows
 
@@ -37,8 +35,6 @@ Existing local database files are not deleted or modified by this setup. They ar
    ```
 
 ## Add project data
-
-On first launch, it creates the schema and default statuses only, with no sample team or task records.
 
 Use **Data management** to create skills, members, task statuses, and tasks. Edit a member to change their name, availability, team lead role, and skills. Edit a task to change its name, duration, priority, slack, status, and required skills. The **Task and member links** tab manages assignments, additional skill requirements, and dependencies.
 
