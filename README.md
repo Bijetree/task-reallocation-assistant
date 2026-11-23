@@ -5,6 +5,7 @@ A local application based on Python and Tkinter for managing team members, skill
 ## Project status
 
 - **Implemented:** Data management, workload views, candidate filtering and scoring, explanations, PROPOSE/ASK/WAIT decisions, lead approval or rejection, history, eligible undo and bounded preference learning.
+  
 - **Limitations:** Reviews are user-initiated; there is no background scheduler. Durations and dependencies are entered manually, and ranking is per task, not globally optimized. Learning and gated automatic action are not benchmark-validated. 
 
 ## Start with a new, empty database
@@ -49,6 +50,10 @@ python -m unittest discover -v
 ```
 
 Tests use temporary databases and do not change the local `database/allocation.db`.
+
+## Development Record
+
+Work progressed from SQLite data operations to an event-driven engine and human-reviewed GUI. Explanations, clarification, approval, history and undo were refined through walkthroughs. Bounded learning and tests were added to check decision outcomes.
 
 ## AI assistance
 
