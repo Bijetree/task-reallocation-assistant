@@ -50,7 +50,7 @@ python -m unittest discover -v
 
 Tests use temporary databases and do not change the local `database/allocation.db`.
 
-## Technology and AI assistance
+## AI assistance
 
 OpenAI ChatGPT/Codex helped with implementation, tests and illustrative mockup creation. Suggestions were reviewed, adapted to the code and checked with tests and walkthroughs. No AI model runs in the app. 
 
